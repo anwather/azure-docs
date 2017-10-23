@@ -61,7 +61,6 @@ The runbook can then use the properties defined in the JSON.
 Param(
      [parameter(Mandatory=$true)]
      [object]$json
-)
 
 # Connect to Azure account   
 $Conn = Get-AutomationConnection -Name AzureRunAsConnection
@@ -96,7 +95,7 @@ Run the following PowerShell commands:
    ```powershell
    $JsonParams = @{"json"=$json}
    ```
-1. Create a hashtable for the parameters for `Start-AzureRmAutomstionRunbook`:
+1. Create a hashtable for the parameters for `Start-AzureRmAutomationRunbook`:
    ```powershell
    $RBParams = @{
         AutomationAccountName = 'AATest'
